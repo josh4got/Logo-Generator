@@ -1,12 +1,67 @@
 // require needed files (inquirer, fs)
-
-// prompt user for input - logo text up to 3 characters
-// prompt user for input - text color keyword / hexa code
-
-// prompt user for input - Shape (list options: circle, square, triangle)
-// prompt user for input - Shape Color keyword / hexa code
-
-// create SVG file named logo.svg
-// console log "Generated logo.svg"
-
-// logo should be 300x200 pixels matching the user's input criteria
+const inquirer = require("inquirer");
+const fs = require("fs");
+const { Shape, Circle, Triangle, Square } = require("./lib/shapes.js");
+// inquirer prompt for user input (logo text, text color, shape, shape color)
+inquirer
+  .prompt([
+    {
+      type: "input",
+      name: "logoText",
+      message: "Input up to 3 character of text for logo: ",
+    },
+    {
+      type: "input",
+      name: "textColor",
+      message: "Input color name or hexidecimal value for the color of text: ",
+    },
+    {
+      type: "list",
+      name: "shape",
+      message: "Select a shape for the logo: ",
+      choices: ["Square", "Circle", "Triangle"],
+    },
+    {
+      type: "input",
+      name: "shapeColor",
+      message: "Input color name or hexidecimal value for the color of shape: ",
+    },
+  ])
+  .then((answers) => {
+    let shape;
+    switch (answers.shape) {
+      case "Square":
+        shape = new Square(
+          answers.logoText,
+          answers.textColor,
+          answers.shape,
+          answers.shapeColor
+        );
+        break;
+      case "Circle":
+        shape = new Circle(
+          answers.logoText,
+          answers.textColor,
+          answers.shape,
+          answers.shapeColor
+        );
+        break;
+      case "Triangle":
+        shape = new Triangle(
+          answers.logoText,
+          answers.textColor,
+          answers.shape,
+          answers.shapeColor
+        );
+        break;
+      default:
+        console.log("Error: Invalid shape");
+    }
+    const svgString = `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">${shape.render()}</svg>`;
+    fs.writeFile("logo.svg", svgString, (err) => {
+      if (err) throw err;
+      else {
+        console.log("Generated logo.svg");
+      }
+    });
+  });
