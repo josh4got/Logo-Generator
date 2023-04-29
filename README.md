@@ -11,13 +11,13 @@ During the development of this project, I learned how to use Node.js to build co
 
 ## Table of Contents
 
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [Credits](#Credits)
-- [License](#License)
-- [Contributing](#Contributing)
-- [Tests](#Tests)
-- [Questions](#Questions)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Installation
 
@@ -29,7 +29,13 @@ Once you have installed Node.js, you can install the required dependencies by ru
 
 To use this application a user can enter the "node index.js" command within an integrated terminal. From there the user will answer each question as prompted within the terminal. following the prompts a user will see a success message and the new logo.svg file will now be created. The file will be placed in the output folder and named "logo.svg"
 
-[Video]()
+<br>
+
+![Ex-Logo](./images/ex-logo.PNG)
+
+<br>
+
+[Video Demo]()
 
 ## Credits
 
