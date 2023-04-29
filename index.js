@@ -58,7 +58,7 @@ inquirer
         console.log("Error: Invalid shape");
     }
     const svgString = `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">${shape.render()}</svg>`;
-    fs.writeFile("logo.svg", svgString, (err) => {
+    fs.writeFile("./output/logo.svg", svgString, (err) => {
       if (err) throw err;
       else {
         console.log("Generated logo.svg");
