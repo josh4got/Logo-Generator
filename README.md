@@ -5,9 +5,9 @@
 
 ## Description
 
-Logo Generator is a command line interface (CLI) application that generates logos based on user input for shape, text, and color. The motivation behind this project was to provide an easy-to-use tool for creating simple logos for personal or professional use. This project solves the problem of having to use complex design software or hire a professional designer to create a logo.
+Logo Generator is a command line interface (CLI) application that generates logos based on user input. This project was made to provide an easy-to-use tool for creating simple logos for personal or professional use. This project eliminates having to use design software or spend significant periods of time creating a logo.
 
-During the development of this project, I learned how to use Node.js to build command line applications, work with third-party libraries like Inquirer, and write tests using Jest.
+This project taught me how to use Node.js to build command line applications, work with third-party libraries like Inquirer, and write tests using Jest.
 
 ## Table of Contents
 
@@ -44,6 +44,8 @@ To use this application a user can enter the "node index.js" command within an i
 [Npm](https://docs.npmjs.com/)
 
 [Node.js](https://nodejs.org/en)
+
+[Jest](https://jestjs.io/docs/getting-started)
 
 ## License
 
